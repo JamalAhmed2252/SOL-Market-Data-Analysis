@@ -12,15 +12,15 @@ including funding rates, open interest, and staking yields for quantitative anal
 
 FILES INCLUDED
 --------------
-- 1_Market_Aggregates.csv: Total market aggregates across all exchanges (200 records)
-- 2_Funding_Rates.csv: Per-exchange funding rates (Bybit, Binance, OKX) (201 records)
-- 3_Open_Interest.csv: Open interest data across major exchanges (300 records)
-- 4_Staking_Yield.csv: SOL staking APY estimates from network data (31 records)
-- 5_Raw_Combined_Data.csv: Complete raw dataset with all metrics (201 records)
+
+- 1_Funding_Rates.csv: Per-exchange funding rates (Bybit, Binance, OKX) (201 records)
+- 2_Open_Interest.csv: Open interest data across major exchanges (300 records)
+- 3_Staking_Yield.csv: SOL staking APY estimates from network data (31 records)
+- 4_Raw_Combined_Data.csv: Complete raw dataset with all metrics (201 records)
 
 DATA SOURCES
 ------------
-- Funding Rates & Open Interest: Bybit, Binance, OKX APIs
+- Funding Rates & Open Interest: Bybit, Binance APIs
 - Staking Yields: Solana Network Average Estimates
 - Data Collection: Free API tier (limited to 33 days historical)
 
@@ -28,7 +28,7 @@ COLUMN DESCRIPTIONS
 -------------------
 timestamp: Unix timestamp in milliseconds
 datetime: Human-readable date/time (YYYY-MM-DD HH:MM:SS)  
-exchange: Trading venue (Bybit, Binance, OKX)
+exchange: Trading venue (Bybit, Binance)
 OI_USD: Open Interest in US Dollars
 funding_rate: Periodic funding rate (decimal percentage)
 staking_yield: Estimated annual staking yield (percentage)
@@ -41,7 +41,7 @@ DATA QUALITY
 ✅ Open Interest: All positive values, realistic growth patterns  
 ✅ Staking Yields: Normal SOL range (5.7% - 6.6%)
 ✅ Time Series: Consistent 8-hour intervals
-✅ Data Coverage: 3 major exchanges
+✅ Data Coverage: 2 major exchanges
 
 LIMITATIONS & NOTES
 -------------------
